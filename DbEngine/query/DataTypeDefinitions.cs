@@ -9,5 +9,17 @@ namespace DbEngine.Query
 	 */
      //Define constructor to initialize this property
 
+        public string[] DataTypes { get; set; }
+
+        public DataTypeDefinitions(string[] dataTypes)
+        {
+            this.DataTypes = dataTypes;
+        }
+
+        public override string ToString()
+        {
+            return string.Join(", ", DataTypes);
+        }
+
     }
 }
